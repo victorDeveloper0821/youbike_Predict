@@ -1,0 +1,8 @@
+#檔案結構
+
+archTree.txt
+
+#pycache
+
+__pycache__/
+*.py[cod]
