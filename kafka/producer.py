@@ -19,7 +19,7 @@ class producer(threading.Thread):
     }
     def __init__(self,topic):
         self.topic = os.environ['CLOUDKARAFKA_TOPIC_PREFIX']+topic
-        p = Producer(**conf)
+        self.p = Producer(**conf)
     def delivery_callback(err, msg):
         if err:
             sys.stderr.write('%% Message failed delivery: %s\n' % err)
